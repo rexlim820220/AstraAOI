@@ -1,0 +1,55 @@
+# Build artifacts
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+*.trx
+
+# Auto-generated files
+Generated_Code/
+
+# OS-specific
+ehthumbs.db
+desktop.ini
+
+# Dotnet CLI artifacts
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET publish artifacts (if applicable)
+wwwroot/
+node_modules/
+dist/
+
+# DAGM dataset (optional: if you want to exclude raw data)
+Resources/SampleImages/Screw/
+
