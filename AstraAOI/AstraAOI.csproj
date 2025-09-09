@@ -1,22 +1,17 @@
-using Basler.Pylon;
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-class Program
-{
-    static void Main()
-    {
-        Camera camera = new Camera();
-        camera.Open();
-        camera.Parameters[PLCameraInstance.MaxNumBuffer].SetValue(5);
-        camera.StreamGrabber.Start(1, GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-        IGrabResult result = camera.StreamGrabber.RetrieveResult(5000, TimeoutHandling.ThrowException);
-        if (result.GrabSucceeded)
-        {
-            Console.WriteLine($"Image Size: {result.Width} x {result.Height}");
-        }
+  <ItemGroup>
+    <Reference Include="Basler.Pylon">
+      <HintPath>/opt/pylon7/lib64/Basler.Pylon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
-        result.Dispose();
-        camera.Close();
-    }
-}
+</Project>
 
