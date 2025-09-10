@@ -1,7 +1,7 @@
 # Build artifacts
-bin/
-obj/
-out/
+*bin/
+*obj/
+*out/
 
 # User-specific files
 *.user
@@ -29,6 +29,9 @@ packages/
 *.swp
 *.DS_Store
 Thumbs.db
+
+# Shared Libraries
+SharedLibraries/
 
 # Test results
 TestResults/
